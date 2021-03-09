@@ -1,0 +1,138 @@
+.nav {
+    display: grid;
+    grid-template-columns: 98px;
+    grid-template-rows: 1fr repeat(7, 80px) 1fr;
+    max-height: 100%;
+    width: 98px;
+    margin: 0px;
+    background-color: #fdfdff;
+    padding: 2em 0em 3em 0em;
+    border: 1px solid #ebebeb;
+    border-radius: 14px 0px 0px 14px;
+}
+
+.nav__link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.nav__link:first-child,
+.nav__link:last-child{
+    height: 80px;
+    width: 100%;
+}
+
+.nav__link:last-child{
+    align-self: flex-end;
+}
+
+svg{
+    fill: #DFE6F1;
+    transition: fill ease .4s;
+}
+
+.nav__link:before{
+    visibility: hidden;
+    opacity: 0;
+    content: '';
+    position: absolute;
+    top: calc(50% - 25px);
+    left: 0;
+    width: 4px;
+    height: 50px;
+    background-color: #7F7FD5;
+    border-radius: 0 5px 5px 0;
+
+    transition: all ease .5s;
+}
+
+.nav__link:hover:before {
+    visibility: visible;
+    opacity: 1;
+    background-color: #7F7FD5;
+}
+
+.nav__link:hover svg {
+    fill:#7F7FD5;
+}
+
+
+// VK Logo
+.nav__logo{
+    display: grid;
+    justify-self: center;
+    align-self: flex-start;
+    padding-top: 1em;
+}
+
+.vk-logo{
+    width: 60px;
+    height: 35px;
+}
+// Toggle
+
+.switch {
+    position: relative;
+    display: grid;
+    justify-self: center;
+    align-self: flex-end; 
+    width: 60px;
+    height: 34px;
+}
+  
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color:#ffffff;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    background-color: #7F7FD5;
+}
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px #7F7FD5;
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+  
+.slider.round {
+    border-radius: 34px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}

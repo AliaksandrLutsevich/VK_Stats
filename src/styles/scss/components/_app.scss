@@ -1,0 +1,55 @@
+.wrapper{
+    position: relative;
+    width: 1600px;
+    height: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}   
+
+.wrapper__upper-element{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1499px;
+    height: 807px;
+    background: url(../../images/backgrounds/background-elipse.png) no-repeat;
+    z-index: 0;
+}
+
+.wrapper__lower-element{
+    position: absolute;
+    right: 0px;
+    top: 890px;
+    width: 413px;
+    height: 413px;
+    background: url(../../images/backgrounds/background-circle.png) no-repeat;
+    z-index: 100;
+}
+
+.app {
+    position: absolute;
+    z-index: 30;
+    display: grid;
+    grid-template-columns: 98px 1182px;
+
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 880px;
+    margin: 0 auto;
+    background: #eff3f9;
+    border-radius: 14px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(31%, 1fr));
+    grid-template-rows: 6.1% 18.1% 30% 30%;
+    grid-gap: 2em;
+    margin: 0 auto;
+    width: 95%;
+    max-height: 100%;
+    padding: 2em 0em 0em 0em;
+}
+
+

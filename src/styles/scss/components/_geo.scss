@@ -1,0 +1,36 @@
+.geo{
+    display: grid;
+    grid-template-rows: 20% 80%;
+    grid-template-columns: 100%;
+    padding: 1em;
+    background: #FDFDFF;
+    border: 1px solid #EBEBEB;
+    box-sizing: border-box;
+    border-radius: 13px;
+    @include cards__title;
+
+    &__header{
+        display: grid;
+        grid-template-columns: 72% 14% 14%;
+        justify-self: space-between;
+    }
+
+    &__progress{
+        width: 310px;
+    }
+}
+
+.geo__header >a{
+    justify-self: flex-end;
+    font-family: &primary-font;
+    margin-top: 0.5em;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 14px;
+    text-decoration: none;
+    color: #979797;
+}
+
+.geo__header >a:hover{
+    color: $primary-color;
+}

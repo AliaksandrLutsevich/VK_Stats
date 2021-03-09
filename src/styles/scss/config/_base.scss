@@ -1,0 +1,31 @@
+@font-face {
+    font-family: Gilroy;
+    src: url(../../fonts/Gilroy-Bold.ttf);
+}
+
+@font-face {
+    font-family: Gilroy;
+    src: url(../../fonts/Gilroy-Regular.ttf);
+}
+
+.dark-mode {
+   .app{
+    background-color: #212427;
+    color: $dm-color;
+    }
+
+    .nav{
+    background-color:#282C31;
+    border: 1px solid $cards-br-color;
+    }
+    
+    .friends,
+    .visitors,
+    .followers,
+    .audience,
+    .reach,
+    .gender-age,
+    .geo{
+    @include cards-dark-style;
+    }
+}

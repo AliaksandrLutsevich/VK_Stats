@@ -1,0 +1,72 @@
+
+@mixin cards__title{
+    font-style: $primary-font;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: $primary-color;
+}
+
+@mixin cards {
+    &__dropdown{
+        position: absolute;
+        top: 30px;
+        left: 290px;
+        background-color: #979797;
+        border-radius: 5px;
+        font-size: 0;
+        padding: 3px;
+    }
+
+    &__dropdown:before {
+        position: absolute;
+        left: 15px;
+        top: 0;
+        content: '';
+        background-color: #979797;
+        border-radius: 5px;
+        font-size: 0;
+        padding: 3px;
+    }
+
+    &__dropdown:after {
+        position: absolute;
+        left: 30px;
+        top: 0;
+        content: '';
+        background-color: #979797;
+        border-radius: 5px;
+        font-size: 0;    
+        padding: 3px;
+    }
+}
+
+@mixin people{
+    display: grid;
+    grid-template-columns: 71% 19% 10%;
+    align-items: center;
+    font-style: $primary-font;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: $primary-color;
+
+    &__arrow{ 
+        justify-self: flex-end;
+    }
+}
+
+@mixin percentage{
+    justify-self: flex-end;
+    font-family: $primary-font;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+
+@mixin cards-dark-style{
+    color: #cacaca;
+    background-color:$cards-bk-color;
+    border: 1px solid $cards-br-color;
+    }

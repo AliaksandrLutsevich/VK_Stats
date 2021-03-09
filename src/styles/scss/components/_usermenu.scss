@@ -1,0 +1,44 @@
+.usermenu{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    justify-content: flex-end;
+    align-items: center;
+    
+    &__name{
+        margin-right: 1em;
+        font-style: $primary-font;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        color: $primary-color;
+    }
+
+    &__avatarbox{
+        box-sizing: border-box;
+        width: 50px;
+        height: 50px;
+    }
+
+    &__arrow{
+        width: 5%;
+        margin-left: 1em;
+    }    
+}
+
+
+.usermenu__avatar-photo{
+    background: url(../../../images/persons/avatar-photo.png) center no-repeat;
+}
+
+.arrow {
+    border: solid #5b5b5b;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}

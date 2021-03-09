@@ -1,0 +1,139 @@
+.audience{
+    display: grid;
+    grid-template-rows: 32% 68%;
+    grid-template-columns: 100%;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1/3;
+    padding: 1em;
+    background: #FDFDFF;
+    border: 1px solid #EBEBEB;
+    box-sizing: border-box;
+    border-radius: 13px;
+
+    &__header{
+        display: grid;
+        grid-template-columns: 40% 35% 10% 15%;
+        align-self: center;
+        height: 100%;
+    }
+    
+    @include cards__title;
+
+    &__graph{
+        width: 716px;
+        height: 141px;
+        padding-top: 1em;
+        font-family: $primary-font;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 14px;
+    }
+
+    &__arrow{
+        width: 7%;
+        margin-left: 0.5em;
+    } 
+
+    &__time{
+        justify-self: center;
+        font-family: $primary-font;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        color: $primary-color;
+    }
+}
+
+.arrow {
+    border: solid #5b5b5b;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+
+// Checkboxes
+
+.total__label{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.total__checkbox{
+    display:none;
+}
+
+.fake__total{
+    position: relative;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 1.5px solid #7F7FD5;
+}
+
+.follower__label{
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+}
+
+.follower__checkbox{
+    display: none;
+}
+
+.fake__follower{
+    position: relative;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 1.5px solid #E786D7;
+}
+
+.fake__total:before{
+    content: '';
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url(../../images/icons/violet-check.png) center no-repeat;
+    opacity: 0;
+    transition: .2s;
+}
+
+.total__checkbox:checked + .fake__total:before{
+    opacity: 1;
+}
+
+.fake__follower:before{
+    content: '';
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url(../../images/icons/violet-check.png) center no-repeat;
+    opacity: 0;
+    transition: .2s;
+}
+
+.follower__checkbox:checked + .fake__follower:before{
+    opacity: 1;
+}
+
+.checkbox__text{
+    font-family: $primary-font;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+}

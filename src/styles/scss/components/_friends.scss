@@ -1,0 +1,26 @@
+.friends{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    position: relative;
+    grid-gap: 2em;
+    padding: 1em;
+    background: #FDFDFF;
+    border: 1px solid #EBEBEB;
+    box-sizing: border-box;
+    border-radius: 13px;
+
+    @include cards__title;
+    @include cards;
+}
+
+.people{
+    @include people;
+}
+
+.people__percent{
+    @include percentage;
+}
+
+
+
+

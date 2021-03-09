@@ -1,0 +1,57 @@
+.reach{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 100%;
+    padding: 1em;
+    background: #FDFDFF;
+    border: 1px solid #EBEBEB;
+    box-sizing: border-box;
+    border-radius: 13px;
+    
+    @include cards__title;
+
+    &__diagrambox{
+        display: grid;
+        grid-template-columns: 55% 45%;
+        justify-self: space-between;
+    }
+
+    &__diagram{
+        width: 160px; 
+    }
+}
+
+.reach__diagram-description{
+    display: grid;
+    grid-template-rows: 25% 25%;
+    justify-self: start;
+    font-family: &primary-font;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.diagram-desciption__desktop,
+.diagram-desciption__mobile{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+}
+
+.diagram-desciption__desktop--color{
+    width: 16px;
+    height: 16px;
+    background: #E786D7;
+    border: 1px solid #E786D7;
+    border-radius: 5px;
+    margin-right: 0px;
+}
+
+.diagram-desciption__mobile-color{
+    width: 16px;
+    height: 16px;
+    background: #7F7FD5;
+    border: 1px solid #7F7FD5;
+    border-radius: 5px;
+    margin-right: 0px;
+}
